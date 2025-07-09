@@ -1,0 +1,111 @@
+% Setting up the document class for presentation
+\documentclass[11pt]{beamer}
+
+% Including essential packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% Defining theme and colors
+\usetheme{metropolis}
+\definecolor{primary}{RGB}{0, 102, 204}
+\definecolor{secondary}{RGB}{255, 153, 51}
+\setbeamercolor{frametitle}{bg=primary, fg=white}
+\setbeamercolor{normal text}{fg=black}
+\setbeamerfont{title}{size=\large}
+\setbeamerfont{frametitle}{size=\normalsize}
+
+% Configuring fonts (using a clean sans-serif font)
+\usepackage[sfdefault]{lmodern} % Fallback sans-serif font
+
+% Title slide information
+\title{AI Trainer: Pose Recognition Web App}
+\subtitle{Revolutionary Real-Time Pose Detection for Fitness and Training}
+\author{xAI}
+\date{July 09, 2025, 11:22 AM IDT}
+
+\begin{document}
+
+% Creating title slide
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% Introducing AI Trainer
+\begin{frame}{Introducing AI Trainer}
+    \begin{itemize}
+        \item Real-time pose recognition
+        \item Offline functionality
+        \item Customizable pose settings
+        \item User-friendly interface
+    \end{itemize}
+\end{frame}
+
+% Core Features
+\begin{frame}{Core Features}
+    \begin{block}{Pose Recognition System}
+        \begin{itemize}
+            \item Real-time webcam-based detection
+            \item Supports 1-7 customizable poses
+            \item Visual comparison with reference images
+            \item Confidence scoring system
+        \end{itemize}
+    \end{block}
+    \begin{block}{Customization Options}
+        \begin{itemize}
+            \item Adjustable accuracy (up to 100%)
+            \item Configurable recognition delay (0-3 seconds)
+            \item Editable pose names
+            \item Audio feedback toggle
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+% GUI: Pose Settings Interface
+\begin{frame}{GUI: Pose Settings Interface}
+    \small{This interface provides all buttons with clear function explanations. Key features include:
+    - "Refresh (Restart from Pose 1)": Resets the pose sequence.
+    - "Back to Settings": Returns to configuration options.
+    - Confidence slider: Adjusts the detection threshold up to 100%.
+    - Pose Settings: Displays the current and expected poses.
+    - Distance feedback: Guides user positioning.}
+\end{frame}
+
+% GUI: Pose Detection Interface
+\begin{frame}{GUI: Pose Detection Interface}
+    \small{This interface displays the recognition screen with real-time pose detection. Features include:
+    - Skeletal tracking with keypoint overlays.
+    - Current pose display and expected pose indication.
+    - Visual feedback with a reference image.
+    - Distance and positioning guidance.}
+\end{frame}
+
+% Easy Setup Process
+\begin{frame}{Easy Setup Process}
+    \begin{enumerate}
+        \item Train a model using Teachable Machine
+        \item Upload model files (model.json, metadata.json, weights.bin)
+        \item Configure poses and settings
+        \item Start recognition with a webcam
+    \end{enumerate}
+    \vspace{0.5cm}
+    \begin{alertblock}{No Internet Required}
+        Fully offline after initial setup
+    \end{alertblock}
+\end{frame}
+
+% Get Started Today!
+\begin{frame}{Get Started Today!}
+    \begin{center}
+        \Large Transform your training experience with AI Trainer\\
+        \vspace{0.5cm}
+        \href{https://x.ai/grok}{\color{primary}Learn More at x.ai}
+    \end{center}
+    \begin{block}{Contact Us}
+        For API integration or custom solutions, visit \href{https://x.ai/api}{\color{primary}x.ai/api}
+    \end{block}
+\end{frame}
+
+\end{document}
