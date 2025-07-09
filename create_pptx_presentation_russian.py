@@ -214,7 +214,56 @@ def create_pose_recognition_presentation_russian():
     p.font.size = Pt(12)
     p.font.color.rgb = RGBColor(255, 0, 0)
     
-    # Slide 8: Advanced features
+    # Slide 8: GUI Pose Settings Detail
+    slide = prs.slides.add_slide(bullet_slide_layout)
+    title = slide.shapes.title
+    content = slide.placeholders[1]
+    
+    title.text = "GUI: Детальные настройки поз"
+    tf = content.text_frame
+    tf.text = "Настройка файлов модели:"
+    tf.paragraphs[0].font.size = Pt(14)
+    tf.paragraphs[0].font.bold = True
+    
+    p = tf.add_paragraph()
+    p.text = "• Загрузка model.json (файл модели)"
+    p.font.size = Pt(12)
+    p = tf.add_paragraph()
+    p.text = "• Загрузка metadata.json (метаданные)"
+    p.font.size = Pt(12)
+    p = tf.add_paragraph()
+    p.text = "• Загрузка weights.bin (веса модели)"
+    p.font.size = Pt(12)
+    
+    p = tf.add_paragraph()
+    p.text = "Выбор активных поз:"
+    p.font.size = Pt(14)
+    p.font.bold = True
+    p = tf.add_paragraph()
+    p.text = "• Флажки для каждой позы (Class 1, 2JAIL, NOT, HLE2, LESAR, PROV, OBCHI)"
+    p.font.size = Pt(12)
+    p = tf.add_paragraph()
+    p.text = "• Настройка имен поз (редактируемые поля)"
+    p.font.size = Pt(12)
+    p = tf.add_paragraph()
+    p.text = "• Загрузка эталонных изображений для каждой позы"
+    p.font.size = Pt(12)
+    
+    p = tf.add_paragraph()
+    p.text = "Элементы управления:"
+    p.font.size = Pt(14)
+    p.font.bold = True
+    p = tf.add_paragraph()
+    p.text = "• Звуковой сигнал (Audio Beep)"
+    p.font.size = Pt(12)
+    p = tf.add_paragraph()
+    p.text = "• Руководство по калибровке расстояния"
+    p.font.size = Pt(12)
+    p = tf.add_paragraph()
+    p.text = "• Кнопки 'Начать распознавание' и 'Начать настройку'"
+    p.font.size = Pt(12)
+    
+    # Slide 9: Advanced features
     slide = prs.slides.add_slide(bullet_slide_layout)
     title = slide.shapes.title
     content = slide.placeholders[1]
@@ -227,15 +276,12 @@ def create_pose_recognition_presentation_russian():
     
     p = tf.add_paragraph()
     p.text = "• Автоматическое определение расстояния пользователя от камеры"
-    p.level = 1
     p.font.size = Pt(12)
     p = tf.add_paragraph()
     p.text = "• Обратная связь в реальном времени для оптимального позиционирования (3-4 фута)"
-    p.level = 1
     p.font.size = Pt(12)
     p = tf.add_paragraph()
     p.text = "• Визуальные подсказки: зеленый = идеально, красный = отрегулировать расстояние"
-    p.level = 1
     p.font.size = Pt(12)
     
     p = tf.add_paragraph()
@@ -244,22 +290,18 @@ def create_pose_recognition_presentation_russian():
     p.font.bold = True
     p = tf.add_paragraph()
     p.text = "• Сохранение всех настроек и файлов модели локально"
-    p.level = 1
     p.font.size = Pt(12)
     p = tf.add_paragraph()
     p.text = "• Функция очистки памяти с подтверждением"
-    p.level = 1
     p.font.size = Pt(12)
     p = tf.add_paragraph()
     p.text = "• Автосохранение для выбора поз и пользовательских имен"
-    p.level = 1
     p.font.size = Pt(12)
     p = tf.add_paragraph()
     p.text = "• Постоянные настройки между сеансами браузера"
-    p.level = 1
     p.font.size = Pt(12)
     
-    # Slide 9: Use cases
+    # Slide 10: Use cases
     slide = prs.slides.add_slide(bullet_slide_layout)
     title = slide.shapes.title
     content = slide.placeholders[1]
@@ -267,19 +309,25 @@ def create_pose_recognition_presentation_russian():
     title.text = "Случаи использования"
     tf = content.text_frame
     tf.text = "• Фитнес-тренировки: мониторинг формы и техники упражнений"
+    tf.paragraphs[0].font.size = Pt(12)
     
     p = tf.add_paragraph()
     p.text = "• Практика йоги: руководство через последовательности поз с обратной связью"
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
     p.text = "• Физическая терапия: отслеживание реабилитационных упражнений"
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
     p.text = "• Спортивное тренерство: анализ спортивных движений"
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
     p.text = "• Образование: обучение правильной осанке и движению"
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
     p.text = "• Доступность: вспомогательные технологии для тренировки движений"
+    p.font.size = Pt(12)
     
-    # Slide 10: Key benefits
+    # Slide 11: Key benefits
     slide = prs.slides.add_slide(bullet_slide_layout)
     title = slide.shapes.title
     content = slide.placeholders[1]
@@ -292,15 +340,12 @@ def create_pose_recognition_presentation_russian():
     
     p = tf.add_paragraph()
     p.text = "• Никакие данные не отправляются на внешние серверы"
-    p.level = 1
     p.font.size = Pt(12)
     p = tf.add_paragraph()
     p.text = "• Локальная обработка обеспечивает конфиденциальность"
-    p.level = 1
     p.font.size = Pt(12)
     p = tf.add_paragraph()
     p.text = "• Автономная функциональность защищает пользовательские данные"
-    p.level = 1
     p.font.size = Pt(12)
     
     p = tf.add_paragraph()
@@ -309,18 +354,15 @@ def create_pose_recognition_presentation_russian():
     p.font.bold = True
     p = tf.add_paragraph()
     p.text = "• Мгновенная обратная связь со звуковыми и визуальными подсказками"
-    p.level = 1
     p.font.size = Pt(12)
     p = tf.add_paragraph()
     p.text = "• Настраиваемая сложность и время"
-    p.level = 1
     p.font.size = Pt(12)
     p = tf.add_paragraph()
     p.text = "• Четкое отслеживание прогресса через последовательности поз"
-    p.level = 1
     p.font.size = Pt(12)
     
-    # Slide 11: Get started today!
+    # Slide 12: Get started today!
     slide = prs.slides.add_slide(bullet_slide_layout)
     title = slide.shapes.title
     content = slide.placeholders[1]
@@ -351,15 +393,12 @@ def create_pose_recognition_presentation_russian():
     p.font.bold = True
     p = tf.add_paragraph()
     p.text = "• Мгновенное развертывание на Replit"
-    p.level = 1
     p.font.size = Pt(12)
     p = tf.add_paragraph()
     p.text = "• Поделитесь с вашей командой или студентами"
-    p.level = 1
     p.font.size = Pt(12)
     p = tf.add_paragraph()
     p.text = "• Настройте для конкретных случаев использования"
-    p.level = 1
     p.font.size = Pt(12)
     
     # Save presentation
