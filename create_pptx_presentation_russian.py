@@ -33,18 +33,24 @@ def create_pose_recognition_presentation_russian():
     
     title.text = "Что такое приложение распознавания поз?"
     tf = content.text_frame
-    tf.text = "Распознавание поз в реальном времени с использованием веб-камеры"
+    tf.text = "• Распознавание поз в реальном времени с использованием веб-камеры"
+    tf.paragraphs[0].font.size = Pt(14)
     
     p = tf.add_paragraph()
-    p.text = "Автономная функциональность - интернет не требуется после настройки"
+    p.text = "• Автономная функциональность - интернет не требуется после настройки"
+    p.font.size = Pt(14)
     p = tf.add_paragraph()
-    p.text = "Настраиваемые параметры для 1-7 поз"
+    p.text = "• Настраиваемые параметры для 1-7 поз"
+    p.font.size = Pt(14)
     p = tf.add_paragraph()
-    p.text = "Поддержка локальных моделей с интеграцией Teachable Machine"
+    p.text = "• Поддержка локальных моделей с интеграцией Teachable Machine"
+    p.font.size = Pt(14)
     p = tf.add_paragraph()
-    p.text = "Калибровка расстояния для оптимального позиционирования"
+    p.text = "• Калибровка расстояния для оптимального позиционирования"
+    p.font.size = Pt(14)
     p = tf.add_paragraph()
-    p.text = "Звуковая обратная связь и визуальное руководство"
+    p.text = "• Звуковая обратная связь и визуальное руководство"
+    p.font.size = Pt(14)
     
     # Slide 3: Core features
     slide = prs.slides.add_slide(bullet_slide_layout)
@@ -54,34 +60,38 @@ def create_pose_recognition_presentation_russian():
     title.text = "Основные функции"
     tf = content.text_frame
     tf.text = "Система распознавания поз:"
+    tf.paragraphs[0].font.size = Pt(16)
+    tf.paragraphs[0].font.bold = True
     
     p = tf.add_paragraph()
-    p.text = "• Поддержка 1-7 настраиваемых поз"
-    p.level = 1
+    p.text = "  • Поддержка 1-7 настраиваемых поз"
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Оценка уверенности в реальном времени (порог 30-90%)"
-    p.level = 1
+    p.text = "  • Оценка уверенности в реальном времени (порог 30-90%)"
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Визуальное сравнение поз с эталонными изображениями"
-    p.level = 1
+    p.text = "  • Визуальное сравнение поз с эталонными изображениями"
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Отслеживание скелета с 17 ключевыми точками"
-    p.level = 1
+    p.text = "  • Отслеживание скелета с 17 ключевыми точками"
+    p.font.size = Pt(12)
     
     p = tf.add_paragraph()
     p.text = "Параметры настройки:"
+    p.font.size = Pt(16)
+    p.font.bold = True
     p = tf.add_paragraph()
-    p.text = "• Регулируемая задержка распознавания (1-10 секунд)"
-    p.level = 1
+    p.text = "  • Регулируемая задержка распознавания (1-10 секунд)"
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Пользовательские названия поз (редактируемые ярлыки)"
-    p.level = 1
+    p.text = "  • Пользовательские названия поз (редактируемые ярлыки)"
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Переключатель звукового сигнала для обратной связи об успехе"
-    p.level = 1
+    p.text = "  • Переключатель звукового сигнала для обратной связи"
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Калибровка расстояния с руководством в реальном времени"
-    p.level = 1
+    p.text = "  • Калибровка расстояния с руководством в реальном времени"
+    p.font.size = Pt(12)
     
     # Slide 4: GUI settings interface
     slide = prs.slides.add_slide(bullet_slide_layout)
@@ -91,17 +101,27 @@ def create_pose_recognition_presentation_russian():
     title.text = "GUI: Интерфейс настроек"
     tf = content.text_frame
     tf.text = "Ключевые особенности:"
+    tf.paragraphs[0].font.size = Pt(16)
+    tf.paragraphs[0].font.bold = True
     
     p = tf.add_paragraph()
-    p.text = "• Загрузка локальных файлов модели (model.json, metadata.json, weights.bin)"
+    p.text = "• Загрузка локальных файлов модели"
+    p.font.size = Pt(14)
+    p = tf.add_paragraph()
+    p.text = "  (model.json, metadata.json, weights.bin)"
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
     p.text = "• Флажки выбора поз для 1-7 поз"
+    p.font.size = Pt(14)
     p = tf.add_paragraph()
     p.text = "• Загрузка эталонных изображений для каждой позы"
+    p.font.size = Pt(14)
     p = tf.add_paragraph()
     p.text = "• Управление звуком, задержкой и порогом точности"
+    p.font.size = Pt(14)
     p = tf.add_paragraph()
     p.text = "• Руководство по калибровке расстояния"
+    p.font.size = Pt(14)
     
     # Try to add image if it exists
     if os.path.exists("attached_assets/GUI1_1752049448296.png"):
