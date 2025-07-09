@@ -7,314 +7,314 @@ from pptx.dml.color import RGBColor
 import os
 
 def create_pose_recognition_presentation_russian():
-    # Создание объекта презентации
+    # Create presentation object
     prs = Presentation()
     
-    # Установка макета слайда
-    title_slide_layout = prs.slide_layouts[0]  # Титульный слайд
-    bullet_slide_layout = prs.slide_layouts[1]  # Заголовок и контент
+    # Set slide layout
+    title_slide_layout = prs.slide_layouts[0]  # Title slide
+    bullet_slide_layout = prs.slide_layouts[1]  # Title and content
     
-    # Определение цветов
-    primary_color = RGBColor(0, 102, 204)  # Синий
-    secondary_color = RGBColor(255, 153, 51)  # Оранжевый
+    # Define colors
+    primary_color = RGBColor(0, 102, 204)  # Blue
+    secondary_color = RGBColor(255, 153, 51)  # Orange
     
-    # Слайд 1: Титульный слайд
+    # Slide 1: Title slide
     slide = prs.slides.add_slide(title_slide_layout)
     title = slide.shapes.title
     subtitle = slide.placeholders[1]
     
-    title.text = "Веб-приложение распознавания поз"
-    subtitle.text = "ИИ-система распознавания поз в реальном времени с поддержкой локальных моделей\n\nКоманда разработчиков Replit\n9 июля 2025"
+    title.text = "Veb-prilozhenie raspoznavaniya poz"
+    subtitle.text = "II-sistema raspoznavaniya poz v realnom vremeni s podderzhkoy lokalnykh modeley\n\nKomanda razrabotchikov Replit\n9 iyulya 2025"
     
-    # Слайд 2: Что такое приложение распознавания поз?
+    # Slide 2: What is pose recognition app?
     slide = prs.slides.add_slide(bullet_slide_layout)
     title = slide.shapes.title
     content = slide.placeholders[1]
     
-    title.text = "Что такое приложение распознавания поз?"
+    title.text = "Chto takoye prilozhenie raspoznavaniya poz?"
     tf = content.text_frame
-    tf.text = "Распознавание поз в реальном времени с использованием веб-камеры"
+    tf.text = "Raspoznavanie poz v realnom vremeni s ispolzovaniem veb-kamery"
     
     p = tf.add_paragraph()
-    p.text = "Автономная функциональность - интернет не требуется после настройки"
+    p.text = "Avtonomnaya funktsionalnost - internet ne trebuetsya posle nastroyki"
     p = tf.add_paragraph()
-    p.text = "Настраиваемые параметры для 1-7 поз"
+    p.text = "Nastraivaemye parametry dlya 1-7 poz"
     p = tf.add_paragraph()
-    p.text = "Поддержка локальных моделей с интеграцией Teachable Machine"
+    p.text = "Podderzhka lokalnykh modeley s integratsiey Teachable Machine"
     p = tf.add_paragraph()
-    p.text = "Калибровка расстояния для оптимального позиционирования"
+    p.text = "Kalibrovka rasstoyaniya dlya optimalnogo pozitsionirovaniya"
     p = tf.add_paragraph()
-    p.text = "Звуковая обратная связь и визуальное руководство"
+    p.text = "Zvukovaya obratnaya svyaz i vizualnoye rukovodstvo"
     
-    # Слайд 3: Основные функции
+    # Slide 3: Core features
     slide = prs.slides.add_slide(bullet_slide_layout)
     title = slide.shapes.title
     content = slide.placeholders[1]
     
-    title.text = "Основные функции"
+    title.text = "Osnovnye funktsii"
     tf = content.text_frame
-    tf.text = "Система распознавания поз:"
+    tf.text = "Sistema raspoznavaniya poz:"
     
     p = tf.add_paragraph()
-    p.text = "• Поддержка 1-7 настраиваемых поз"
+    p.text = "• Podderzhka 1-7 nastraivaemykh poz"
     p.level = 1
     p = tf.add_paragraph()
-    p.text = "• Оценка уверенности в реальном времени (порог 30-90%)"
+    p.text = "• Otsenka uverennosti v realnom vremeni (porog 30-90%)"
     p.level = 1
     p = tf.add_paragraph()
-    p.text = "• Визуальное сравнение поз с эталонными изображениями"
+    p.text = "• Vizualnoye sravnenie poz s etalonymi izobrazheniyami"
     p.level = 1
     p = tf.add_paragraph()
-    p.text = "• Отслеживание скелета с 17 ключевыми точками"
-    p.level = 1
-    
-    p = tf.add_paragraph()
-    p.text = "Параметры настройки:"
-    p = tf.add_paragraph()
-    p.text = "• Регулируемая задержка распознавания (1-10 секунд)"
-    p.level = 1
-    p = tf.add_paragraph()
-    p.text = "• Пользовательские названия поз (редактируемые ярлыки)"
-    p.level = 1
-    p = tf.add_paragraph()
-    p.text = "• Переключатель звукового сигнала для обратной связи об успехе"
-    p.level = 1
-    p = tf.add_paragraph()
-    p.text = "• Калибровка расстояния с руководством в реальном времени"
+    p.text = "• Otslezhivanie skeleta s 17 klyuchevymi tochkami"
     p.level = 1
     
-    # Слайд 4: Интерфейс настроек GUI
+    p = tf.add_paragraph()
+    p.text = "Parametry nastroyki:"
+    p = tf.add_paragraph()
+    p.text = "• Reguliruemaya zaderzhka raspoznavaniya (1-10 sekund)"
+    p.level = 1
+    p = tf.add_paragraph()
+    p.text = "• Polzovatelskie nazvaniya poz (redaktiruemye yarlyki)"
+    p.level = 1
+    p = tf.add_paragraph()
+    p.text = "• Pereklyuchatel zvukovogo signala dlya obratnoy svyazi ob uspehe"
+    p.level = 1
+    p = tf.add_paragraph()
+    p.text = "• Kalibrovka rasstoyaniya s rukovodstvom v realnom vremeni"
+    p.level = 1
+    
+    # Slide 4: GUI settings interface
     slide = prs.slides.add_slide(bullet_slide_layout)
     title = slide.shapes.title
     content = slide.placeholders[1]
     
-    title.text = "GUI: Интерфейс настроек"
+    title.text = "GUI: Interfeys nastroyek"
     tf = content.text_frame
-    tf.text = "Ключевые особенности:"
+    tf.text = "Klyuchevye osobennosti:"
     
     p = tf.add_paragraph()
-    p.text = "• Загрузка локальных файлов модели (model.json, metadata.json, weights.bin)"
+    p.text = "• Zagruzka lokalnykh faylov modeli (model.json, metadata.json, weights.bin)"
     p = tf.add_paragraph()
-    p.text = "• Флажки выбора поз для 1-7 поз"
+    p.text = "• Flazhki vybora poz dlya 1-7 poz"
     p = tf.add_paragraph()
-    p.text = "• Загрузка эталонных изображений для каждой позы"
+    p.text = "• Zagruzka etalonnykh izobrazheniy dlya kazhdoy pozy"
     p = tf.add_paragraph()
-    p.text = "• Управление звуком, задержкой и порогом точности"
+    p.text = "• Upravlenie zvukom, zaderzhkoy i porogom tochnosti"
     p = tf.add_paragraph()
-    p.text = "• Руководство по калибровке расстояния"
+    p.text = "• Rukovodstvo po kalibrovke rasstoyaniya"
     
-    # Попытка добавить изображение, если оно существует
+    # Try to add image if it exists
     if os.path.exists("attached_assets/GUI1_1752049448296.png"):
         slide.shapes.add_picture("attached_assets/GUI1_1752049448296.png", 
                                Inches(1), Inches(3), Inches(8), Inches(4))
     
-    # Слайд 5: Интерфейс распознавания GUI
+    # Slide 5: GUI recognition interface
     slide = prs.slides.add_slide(bullet_slide_layout)
     title = slide.shapes.title
     content = slide.placeholders[1]
     
-    title.text = "GUI: Интерфейс распознавания"
+    title.text = "GUI: Interfeys raspoznavaniya"
     tf = content.text_frame
-    tf.text = "Функции в реальном времени:"
+    tf.text = "Funktsii v realnom vremeni:"
     
     p = tf.add_paragraph()
-    p.text = "• Прямая трансляция с веб-камеры с обнаружением поз"
+    p.text = "• Pryamaya translyatsiya s veb-kamery s obnaruzheniem poz"
     p = tf.add_paragraph()
-    p.text = "• Отображение текущей и ожидаемой позы"
+    p.text = "• Otobrazenie tekushchey i ozhidaemoy pozy"
     p = tf.add_paragraph()
-    p.text = "• Полоса уверенности с цветовым кодированием (зеленый = правильно, красный = неправильно)"
+    p.text = "• Polosa uverennosti s tsvetovym kodirovaniem (zelenyy = pravilno, krasnyy = nepravilno)"
     p = tf.add_paragraph()
-    p.text = "• Сравнение с эталонным изображением"
+    p.text = "• Sravnenie s etalonnym izobrazheniem"
     p = tf.add_paragraph()
-    p.text = "• Обновление и возврат к настройкам"
+    p.text = "• Obnovlenie i vozvrat k nastroykam"
     
-    # Попытка добавить изображение, если оно существует
+    # Try to add image if it exists
     if os.path.exists("attached_assets/GUI2_1752049449853.png"):
         slide.shapes.add_picture("attached_assets/GUI2_1752049449853.png", 
                                Inches(1), Inches(3), Inches(8), Inches(4))
     
-    # Слайд 6: Технические характеристики
+    # Slide 6: Technical specifications
     slide = prs.slides.add_slide(bullet_slide_layout)
     title = slide.shapes.title
     content = slide.placeholders[1]
     
-    title.text = "Технические характеристики"
+    title.text = "Tekhnicheskie kharakteristiki"
     tf = content.text_frame
-    tf.text = "ИИ-фреймворк:"
+    tf.text = "II-freymvork:"
     
     p = tf.add_paragraph()
-    p.text = "• TensorFlow.js с моделями Teachable Machine"
+    p.text = "• TensorFlow.js s modelyami Teachable Machine"
     p.level = 1
     p = tf.add_paragraph()
-    p.text = "• PoseNet для отслеживания скелета из 17 точек"
+    p.text = "• PoseNet dlya otslezhivaniya skeleta iz 17 tochek"
     p.level = 1
     p = tf.add_paragraph()
-    p.text = "• Локальное хранилище с IndexedDB для автономного использования"
-    p.level = 1
-    
-    p = tf.add_paragraph()
-    p.text = "Совместимость:"
-    p = tf.add_paragraph()
-    p.text = "• Современные браузеры с поддержкой WebRTC"
-    p.level = 1
-    p = tf.add_paragraph()
-    p.text = "• Оптимизировано для совместимости с Windows"
-    p.level = 1
-    p = tf.add_paragraph()
-    p.text = "• Автоматическое сжатие изображений для хранения"
-    p.level = 1
-    p = tf.add_paragraph()
-    p.text = "• Несколько резервных разрешений камеры"
+    p.text = "• Lokalnoye khranilishche s IndexedDB dlya avtonomnogo ispolzovaniya"
     p.level = 1
     
-    # Слайд 7: Простой процесс настройки
+    p = tf.add_paragraph()
+    p.text = "Sovmestimost:"
+    p = tf.add_paragraph()
+    p.text = "• Sovremennye brauzery s podderzhkoy WebRTC"
+    p.level = 1
+    p = tf.add_paragraph()
+    p.text = "• Optimizirovano dlya sovmestimosti s Windows"
+    p.level = 1
+    p = tf.add_paragraph()
+    p.text = "• Avtomaticheskoye szhatiye izobrazheniy dlya khraneniya"
+    p.level = 1
+    p = tf.add_paragraph()
+    p.text = "• Neskolko rezervnykh razresheniy kamery"
+    p.level = 1
+    
+    # Slide 7: Simple setup process
     slide = prs.slides.add_slide(bullet_slide_layout)
     title = slide.shapes.title
     content = slide.placeholders[1]
     
-    title.text = "Простой процесс настройки"
+    title.text = "Prostoy protsess nastroyki"
     tf = content.text_frame
-    tf.text = "1. Обучите модель: используйте Teachable Machine для создания модели поз"
+    tf.text = "1. Obuchite model: ispolzuyte Teachable Machine dlya sozdaniya modeli poz"
     
     p = tf.add_paragraph()
-    p.text = "2. Загрузите файлы: импортируйте model.json, metadata.json, weights.bin"
+    p.text = "2. Zagruzite fayly: importiruyte model.json, metadata.json, weights.bin"
     p = tf.add_paragraph()
-    p.text = "3. Настройте позы: выберите 1-7 поз и загрузите эталонные изображения"
+    p.text = "3. Nastroyte pozy: vyberite 1-7 poz i zagruzite etalonyne izobrazheniya"
     p = tf.add_paragraph()
-    p.text = "4. Настройте параметры: установите звук, задержку и предпочтения точности"
+    p.text = "4. Nastroyte parametry: ustanovite zvuk, zaderzhku i predpochteniya tochnosti"
     p = tf.add_paragraph()
-    p.text = "5. Начните распознавание: запустите обнаружение поз в реальном времени"
+    p.text = "5. Nachnite raspoznavanie: zapustite obnaruzhenie poz v realnom vremeni"
     
-    # Добавить заметку
+    # Add note
     p = tf.add_paragraph()
-    p.text = "\nПолностью автономно: работает полностью без интернета после первоначальной настройки"
+    p.text = "\nPolnostyu avtonomno: rabotaet polnostyu bez interneta posle pervonachalnoy nastroyki"
     p.font.bold = True
     p.font.color.rgb = RGBColor(255, 0, 0)
     
-    # Слайд 8: Расширенные функции
+    # Slide 8: Advanced features
     slide = prs.slides.add_slide(bullet_slide_layout)
     title = slide.shapes.title
     content = slide.placeholders[1]
     
-    title.text = "Расширенные функции"
+    title.text = "Rasshirennye funktsii"
     tf = content.text_frame
-    tf.text = "Калибровка расстояния:"
+    tf.text = "Kalibrovka rasstoyaniya:"
     
     p = tf.add_paragraph()
-    p.text = "• Автоматическое определение расстояния пользователя от камеры"
+    p.text = "• Avtomaticheskoye opredelenie rasstoyaniya polzovatelya ot kamery"
     p.level = 1
     p = tf.add_paragraph()
-    p.text = "• Обратная связь в реальном времени для оптимального позиционирования (3-4 фута)"
+    p.text = "• Obratnaya svyaz v realnom vremeni dlya optimalnogo pozitsionirovaniya (3-4 futa)"
     p.level = 1
     p = tf.add_paragraph()
-    p.text = "• Визуальные подсказки: зеленый = идеально, красный = отрегулировать расстояние"
-    p.level = 1
-    
-    p = tf.add_paragraph()
-    p.text = "Управление данными:"
-    p = tf.add_paragraph()
-    p.text = "• Сохранение всех настроек и файлов модели локально"
-    p.level = 1
-    p = tf.add_paragraph()
-    p.text = "• Функция очистки памяти с подтверждением"
-    p.level = 1
-    p = tf.add_paragraph()
-    p.text = "• Автосохранение для выбора поз и пользовательских имен"
-    p.level = 1
-    p = tf.add_paragraph()
-    p.text = "• Постоянные настройки между сеансами браузера"
+    p.text = "• Vizualye podskazki: zelenyy = idealno, krasnyy = otregulirovat rasstoyanie"
     p.level = 1
     
-    # Слайд 9: Случаи использования
+    p = tf.add_paragraph()
+    p.text = "Upravlenie dannymi:"
+    p = tf.add_paragraph()
+    p.text = "• Sokhranenie vsekh nastroyek i faylov modeli lokalno"
+    p.level = 1
+    p = tf.add_paragraph()
+    p.text = "• Funktsiya ochistki pamyati s podtverzhdeniem"
+    p.level = 1
+    p = tf.add_paragraph()
+    p.text = "• Avtosokhranenie dlya vybora poz i polzovatelskikh imen"
+    p.level = 1
+    p = tf.add_paragraph()
+    p.text = "• Postoyannye nastroyki mezhdu seansami brauzera"
+    p.level = 1
+    
+    # Slide 9: Use cases
     slide = prs.slides.add_slide(bullet_slide_layout)
     title = slide.shapes.title
     content = slide.placeholders[1]
     
-    title.text = "Случаи использования"
+    title.text = "Sluchai ispolzovaniya"
     tf = content.text_frame
-    tf.text = "• Фитнес-тренировки: мониторинг формы и техники упражнений"
+    tf.text = "• Fitnes-trenirovki: monitoring formy i tekhniki uprazhneniy"
     
     p = tf.add_paragraph()
-    p.text = "• Практика йоги: руководство через последовательности поз с обратной связью"
+    p.text = "• Praktika yogi: rukovodstvo cherez posledovatelnosti poz s obratnoy svyazyu"
     p = tf.add_paragraph()
-    p.text = "• Физическая терапия: отслеживание реабилитационных упражнений"
+    p.text = "• Fizicheskaya terapiya: otslezhivanie reabilitatsionnykh uprazhneniy"
     p = tf.add_paragraph()
-    p.text = "• Спортивное тренерство: анализ спортивных движений"
+    p.text = "• Sportivnoye trenerstvo: analiz sportivnykh dvizheniy"
     p = tf.add_paragraph()
-    p.text = "• Образование: обучение правильной осанке и движению"
+    p.text = "• Obrazovanie: obuchenie pravilnoy osanke i dvizheniyu"
     p = tf.add_paragraph()
-    p.text = "• Доступность: вспомогательные технологии для тренировки движений"
+    p.text = "• Dostupnost: vspomogatelnye tekhnologii dlya trenirovki dvizheniy"
     
-    # Слайд 10: Ключевые преимущества
+    # Slide 10: Key benefits
     slide = prs.slides.add_slide(bullet_slide_layout)
     title = slide.shapes.title
     content = slide.placeholders[1]
     
-    title.text = "Ключевые преимущества"
+    title.text = "Klyuchevye preimushchestva"
     tf = content.text_frame
-    tf.text = "Конфиденциальность и безопасность:"
+    tf.text = "Konfidentsialnost i bezopasnost:"
     
     p = tf.add_paragraph()
-    p.text = "• Никакие данные не отправляются на внешние серверы"
+    p.text = "• Nikakie dannye ne otpravlyayutsya na vneshnie servery"
     p.level = 1
     p = tf.add_paragraph()
-    p.text = "• Локальная обработка обеспечивает конфиденциальность"
+    p.text = "• Lokalnaya obrabotka obespechivaet konfidentsialnost"
     p.level = 1
     p = tf.add_paragraph()
-    p.text = "• Автономная функциональность защищает пользовательские данные"
-    p.level = 1
-    
-    p = tf.add_paragraph()
-    p.text = "Пользовательский опыт:"
-    p = tf.add_paragraph()
-    p.text = "• Мгновенная обратная связь со звуковыми и визуальными подсказками"
-    p.level = 1
-    p = tf.add_paragraph()
-    p.text = "• Настраиваемая сложность и время"
-    p.level = 1
-    p = tf.add_paragraph()
-    p.text = "• Четкое отслеживание прогресса через последовательности поз"
+    p.text = "• Avtonomnaya funktsionalnost zashchishchaet polzovatelskie dannye"
     p.level = 1
     
-    # Слайд 11: Начните сегодня!
+    p = tf.add_paragraph()
+    p.text = "Polzovatelskiy opyt:"
+    p = tf.add_paragraph()
+    p.text = "• Mgnovennaya obratnaya svyaz so zvukovymi i vizualnymi podskazkami"
+    p.level = 1
+    p = tf.add_paragraph()
+    p.text = "• Nastraivaemaya slozhnost i vremya"
+    p.level = 1
+    p = tf.add_paragraph()
+    p.text = "• Chetkoe otslezhivanie progressa cherez posledovatelnosti poz"
+    p.level = 1
+    
+    # Slide 11: Get started today!
     slide = prs.slides.add_slide(bullet_slide_layout)
     title = slide.shapes.title
     content = slide.placeholders[1]
     
-    title.text = "Начните сегодня!"
+    title.text = "Nachnite segodnya!"
     tf = content.text_frame
-    tf.text = "Преобразите свой тренировочный опыт с веб-приложением распознавания поз"
+    tf.text = "Preobrazite svoy trenirovochnyy opyt s veb-prilozheniem raspoznavaniya poz"
     tf.paragraphs[0].font.size = Pt(18)
     tf.paragraphs[0].font.bold = True
     tf.paragraphs[0].alignment = PP_ALIGN.CENTER
     
     p = tf.add_paragraph()
-    p.text = "\nДоступно на Replit: простое развертывание и совместное использование"
+    p.text = "\nDostupno na Replit: prostoye razvertyvanie i sovmestnoye ispolzovanie"
     p.font.bold = True
     p = tf.add_paragraph()
-    p.text = "Открытый исходный код: настраиваемый для ваших нужд"
+    p.text = "Otkrytyy iskhodnyy kod: nastraivaemyy dlya vashikh nuzhd"
     p.font.bold = True
     p = tf.add_paragraph()
-    p.text = "Без установки: запускается прямо в вашем браузере"
+    p.text = "Bez ustanovki: zapuskaetsya pryamo v vashem brauzere"
     p.font.bold = True
     
     p = tf.add_paragraph()
-    p.text = "\nГотово к использованию:"
+    p.text = "\nGotovo k ispolzovaniyu:"
     p = tf.add_paragraph()
-    p.text = "• Мгновенное развертывание на Replit"
+    p.text = "• Mgnovennoe razvertyvanie na Replit"
     p.level = 1
     p = tf.add_paragraph()
-    p.text = "• Поделитесь с вашей командой или студентами"
+    p.text = "• Podelites s vashey komandoy ili studentami"
     p.level = 1
     p = tf.add_paragraph()
-    p.text = "• Настройте для конкретных случаев использования"
+    p.text = "• Nastroyte dlya konkretnykh sluchaev ispolzovaniya"
     p.level = 1
     
-    # Сохранение презентации
+    # Save presentation
     output_path = "attached_assets/Pose_Recognition_Presentation_Russian.pptx"
     prs.save(output_path)
-    print("Презентация PowerPoint успешно создана!")
-    print(f"PPTX файл сохранен: {output_path}")
+    print("Prezentatsiya PowerPoint uspeshno sozdana!")
+    print(f"PPTX fayl sokhranyen: {output_path}")
     
     return output_path
 
