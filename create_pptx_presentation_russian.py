@@ -313,8 +313,8 @@ def create_pose_recognition_presentation_russian():
     # Сохранение презентации
     output_path = "attached_assets/Pose_Recognition_Presentation_Russian.pptx"
     prs.save(output_path)
-    print(f"✅ Презентация PowerPoint успешно создана!")
-    print(f"📄 PPTX файл сохранен: {output_path}")
+    print("Презентация PowerPoint успешно создана!")
+    print(f"PPTX файл сохранен: {output_path}")
     
     return output_path
 

@@ -313,8 +313,8 @@ def create_pose_recognition_presentation():
     # Save the presentation
     output_path = "attached_assets/Pose_Recognition_Presentation.pptx"
     prs.save(output_path)
-    print(f"✅ PowerPoint presentation created successfully!")
-    print(f"📄 PPTX file saved: {output_path}")
+    print("PowerPoint presentation created successfully!")
+    print(f"PPTX file saved: {output_path}")
     
     return output_path
 
