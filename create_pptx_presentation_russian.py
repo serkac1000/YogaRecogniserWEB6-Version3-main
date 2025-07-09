@@ -23,64 +23,64 @@ def create_pose_recognition_presentation_russian():
     title = slide.shapes.title
     subtitle = slide.placeholders[1]
     
-    title.text = "Veb-prilozhenie raspoznavaniya poz"
-    subtitle.text = "II-sistema raspoznavaniya poz v realnom vremeni s podderzhkoy lokalnykh modeley\n\nKomanda razrabotchikov Replit\n9 iyulya 2025"
+    title.text = "Веб-приложение распознавания поз"
+    subtitle.text = "ИИ-система распознавания поз в реальном времени с поддержкой локальных моделей\n\nКоманда разработчиков Replit\n9 июля 2025"
     
     # Slide 2: What is pose recognition app?
     slide = prs.slides.add_slide(bullet_slide_layout)
     title = slide.shapes.title
     content = slide.placeholders[1]
     
-    title.text = "Chto takoye prilozhenie raspoznavaniya poz?"
+    title.text = "Что такое приложение распознавания поз?"
     tf = content.text_frame
-    tf.text = "Raspoznavanie poz v realnom vremeni s ispolzovaniem veb-kamery"
+    tf.text = "Распознавание поз в реальном времени с использованием веб-камеры"
     
     p = tf.add_paragraph()
-    p.text = "Avtonomnaya funktsionalnost - internet ne trebuetsya posle nastroyki"
+    p.text = "Автономная функциональность - интернет не требуется после настройки"
     p = tf.add_paragraph()
-    p.text = "Nastraivaemye parametry dlya 1-7 poz"
+    p.text = "Настраиваемые параметры для 1-7 поз"
     p = tf.add_paragraph()
-    p.text = "Podderzhka lokalnykh modeley s integratsiey Teachable Machine"
+    p.text = "Поддержка локальных моделей с интеграцией Teachable Machine"
     p = tf.add_paragraph()
-    p.text = "Kalibrovka rasstoyaniya dlya optimalnogo pozitsionirovaniya"
+    p.text = "Калибровка расстояния для оптимального позиционирования"
     p = tf.add_paragraph()
-    p.text = "Zvukovaya obratnaya svyaz i vizualnoye rukovodstvo"
+    p.text = "Звуковая обратная связь и визуальное руководство"
     
     # Slide 3: Core features
     slide = prs.slides.add_slide(bullet_slide_layout)
     title = slide.shapes.title
     content = slide.placeholders[1]
     
-    title.text = "Osnovnye funktsii"
+    title.text = "Основные функции"
     tf = content.text_frame
-    tf.text = "Sistema raspoznavaniya poz:"
+    tf.text = "Система распознавания поз:"
     
     p = tf.add_paragraph()
-    p.text = "• Podderzhka 1-7 nastraivaemykh poz"
+    p.text = "• Поддержка 1-7 настраиваемых поз"
     p.level = 1
     p = tf.add_paragraph()
-    p.text = "• Otsenka uverennosti v realnom vremeni (porog 30-90%)"
+    p.text = "• Оценка уверенности в реальном времени (порог 30-90%)"
     p.level = 1
     p = tf.add_paragraph()
-    p.text = "• Vizualnoye sravnenie poz s etalonymi izobrazheniyami"
+    p.text = "• Визуальное сравнение поз с эталонными изображениями"
     p.level = 1
     p = tf.add_paragraph()
-    p.text = "• Otslezhivanie skeleta s 17 klyuchevymi tochkami"
+    p.text = "• Отслеживание скелета с 17 ключевыми точками"
     p.level = 1
     
     p = tf.add_paragraph()
-    p.text = "Parametry nastroyki:"
+    p.text = "Параметры настройки:"
     p = tf.add_paragraph()
-    p.text = "• Reguliruemaya zaderzhka raspoznavaniya (1-10 sekund)"
+    p.text = "• Регулируемая задержка распознавания (1-10 секунд)"
     p.level = 1
     p = tf.add_paragraph()
-    p.text = "• Polzovatelskie nazvaniya poz (redaktiruemye yarlyki)"
+    p.text = "• Пользовательские названия поз (редактируемые ярлыки)"
     p.level = 1
     p = tf.add_paragraph()
-    p.text = "• Pereklyuchatel zvukovogo signala dlya obratnoy svyazi ob uspehe"
+    p.text = "• Переключатель звукового сигнала для обратной связи об успехе"
     p.level = 1
     p = tf.add_paragraph()
-    p.text = "• Kalibrovka rasstoyaniya s rukovodstvom v realnom vremeni"
+    p.text = "• Калибровка расстояния с руководством в реальном времени"
     p.level = 1
     
     # Slide 4: GUI settings interface
@@ -88,20 +88,20 @@ def create_pose_recognition_presentation_russian():
     title = slide.shapes.title
     content = slide.placeholders[1]
     
-    title.text = "GUI: Interfeys nastroyek"
+    title.text = "GUI: Интерфейс настроек"
     tf = content.text_frame
-    tf.text = "Klyuchevye osobennosti:"
+    tf.text = "Ключевые особенности:"
     
     p = tf.add_paragraph()
-    p.text = "• Zagruzka lokalnykh faylov modeli (model.json, metadata.json, weights.bin)"
+    p.text = "• Загрузка локальных файлов модели (model.json, metadata.json, weights.bin)"
     p = tf.add_paragraph()
-    p.text = "• Flazhki vybora poz dlya 1-7 poz"
+    p.text = "• Флажки выбора поз для 1-7 поз"
     p = tf.add_paragraph()
-    p.text = "• Zagruzka etalonnykh izobrazheniy dlya kazhdoy pozy"
+    p.text = "• Загрузка эталонных изображений для каждой позы"
     p = tf.add_paragraph()
-    p.text = "• Upravlenie zvukom, zaderzhkoy i porogom tochnosti"
+    p.text = "• Управление звуком, задержкой и порогом точности"
     p = tf.add_paragraph()
-    p.text = "• Rukovodstvo po kalibrovke rasstoyaniya"
+    p.text = "• Руководство по калибровке расстояния"
     
     # Try to add image if it exists
     if os.path.exists("attached_assets/GUI1_1752049448296.png"):
@@ -230,20 +230,20 @@ def create_pose_recognition_presentation_russian():
     title = slide.shapes.title
     content = slide.placeholders[1]
     
-    title.text = "Sluchai ispolzovaniya"
+    title.text = "Случаи использования"
     tf = content.text_frame
-    tf.text = "• Fitnes-trenirovki: monitoring formy i tekhniki uprazhneniy"
+    tf.text = "• Фитнес-тренировки: мониторинг формы и техники упражнений"
     
     p = tf.add_paragraph()
-    p.text = "• Praktika yogi: rukovodstvo cherez posledovatelnosti poz s obratnoy svyazyu"
+    p.text = "• Практика йоги: руководство через последовательности поз с обратной связью"
     p = tf.add_paragraph()
-    p.text = "• Fizicheskaya terapiya: otslezhivanie reabilitatsionnykh uprazhneniy"
+    p.text = "• Физическая терапия: отслеживание реабилитационных упражнений"
     p = tf.add_paragraph()
-    p.text = "• Sportivnoye trenerstvo: analiz sportivnykh dvizheniy"
+    p.text = "• Спортивное тренерство: анализ спортивных движений"
     p = tf.add_paragraph()
-    p.text = "• Obrazovanie: obuchenie pravilnoy osanke i dvizheniyu"
+    p.text = "• Образование: обучение правильной осанке и движению"
     p = tf.add_paragraph()
-    p.text = "• Dostupnost: vspomogatelnye tekhnologii dlya trenirovki dvizheniy"
+    p.text = "• Доступность: вспомогательные технологии для тренировки движений"
     
     # Slide 10: Key benefits
     slide = prs.slides.add_slide(bullet_slide_layout)
