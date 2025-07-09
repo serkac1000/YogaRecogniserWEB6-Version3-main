@@ -113,20 +113,26 @@ def create_pose_recognition_presentation_russian():
     title = slide.shapes.title
     content = slide.placeholders[1]
     
-    title.text = "GUI: Interfeys raspoznavaniya"
+    title.text = "GUI: Интерфейс распознавания"
     tf = content.text_frame
-    tf.text = "Funktsii v realnom vremeni:"
+    tf.text = "Функции в реальном времени:"
+    tf.paragraphs[0].font.size = Pt(14)
     
     p = tf.add_paragraph()
-    p.text = "• Pryamaya translyatsiya s veb-kamery s obnaruzheniem poz"
+    p.text = "• Прямая трансляция с веб-камеры с обнаружением поз"
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Otobrazenie tekushchey i ozhidaemoy pozy"
+    p.text = "• Отображение текущей и ожидаемой позы"
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Polosa uverennosti s tsvetovym kodirovaniem (zelenyy = pravilno, krasnyy = nepravilno)"
+    p.text = "• Полоса уверенности с цветовым кодированием (зеленый = правильно, красный = неправильно)"
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Sravnenie s etalonnym izobrazheniem"
+    p.text = "• Сравнение с эталонным изображением"
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Obnovlenie i vozvrat k nastroykam"
+    p.text = "• Обновление и возврат к настройкам"
+    p.font.size = Pt(12)
     
     # Try to add image if it exists
     if os.path.exists("attached_assets/GUI2_1752049449853.png"):
@@ -138,57 +144,74 @@ def create_pose_recognition_presentation_russian():
     title = slide.shapes.title
     content = slide.placeholders[1]
     
-    title.text = "Tekhnicheskie kharakteristiki"
+    title.text = "Технические характеристики"
     tf = content.text_frame
-    tf.text = "II-freymvork:"
+    tf.text = "ИИ-фреймворк:"
+    tf.paragraphs[0].font.size = Pt(14)
+    tf.paragraphs[0].font.bold = True
     
     p = tf.add_paragraph()
-    p.text = "• TensorFlow.js s modelyami Teachable Machine"
+    p.text = "• TensorFlow.js с моделями Teachable Machine"
     p.level = 1
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• PoseNet dlya otslezhivaniya skeleta iz 17 tochek"
+    p.text = "• PoseNet для отслеживания скелета из 17 точек"
     p.level = 1
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Lokalnoye khranilishche s IndexedDB dlya avtonomnogo ispolzovaniya"
+    p.text = "• Локальное хранилище с IndexedDB для автономного использования"
     p.level = 1
+    p.font.size = Pt(12)
     
     p = tf.add_paragraph()
-    p.text = "Sovmestimost:"
+    p.text = "Совместимость:"
+    p.font.size = Pt(14)
+    p.font.bold = True
     p = tf.add_paragraph()
-    p.text = "• Sovremennye brauzery s podderzhkoy WebRTC"
+    p.text = "• Современные браузеры с поддержкой WebRTC"
     p.level = 1
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Optimizirovano dlya sovmestimosti s Windows"
+    p.text = "• Оптимизировано для совместимости с Windows"
     p.level = 1
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Avtomaticheskoye szhatiye izobrazheniy dlya khraneniya"
+    p.text = "• Автоматическое сжатие изображений для хранения"
     p.level = 1
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Neskolko rezervnykh razresheniy kamery"
+    p.text = "• Несколько резервных разрешений камеры"
     p.level = 1
+    p.font.size = Pt(12)
     
     # Slide 7: Simple setup process
     slide = prs.slides.add_slide(bullet_slide_layout)
     title = slide.shapes.title
     content = slide.placeholders[1]
     
-    title.text = "Prostoy protsess nastroyki"
+    title.text = "Простой процесс настройки"
     tf = content.text_frame
-    tf.text = "1. Obuchite model: ispolzuyte Teachable Machine dlya sozdaniya modeli poz"
+    tf.text = "1. Обучите модель: используйте Teachable Machine для создания модели поз"
+    tf.paragraphs[0].font.size = Pt(12)
     
     p = tf.add_paragraph()
-    p.text = "2. Zagruzite fayly: importiruyte model.json, metadata.json, weights.bin"
+    p.text = "2. Загрузите файлы: импортируйте model.json, metadata.json, weights.bin"
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "3. Nastroyte pozy: vyberite 1-7 poz i zagruzite etalonyne izobrazheniya"
+    p.text = "3. Настройте позы: выберите 1-7 поз и загрузите эталонные изображения"
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "4. Nastroyte parametry: ustanovite zvuk, zaderzhku i predpochteniya tochnosti"
+    p.text = "4. Настройте параметры: установите звук, задержку и предпочтения точности"
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "5. Nachnite raspoznavanie: zapustite obnaruzhenie poz v realnom vremeni"
+    p.text = "5. Начните распознавание: запустите обнаружение поз в реальном времени"
+    p.font.size = Pt(12)
     
     # Add note
     p = tf.add_paragraph()
-    p.text = "\nPolnostyu avtonomno: rabotaet polnostyu bez interneta posle pervonachalnoy nastroyki"
+    p.text = "\nПолностью автономно: работает полностью без интернета после первоначальной настройки"
     p.font.bold = True
+    p.font.size = Pt(12)
     p.font.color.rgb = RGBColor(255, 0, 0)
     
     # Slide 8: Advanced features
@@ -196,34 +219,45 @@ def create_pose_recognition_presentation_russian():
     title = slide.shapes.title
     content = slide.placeholders[1]
     
-    title.text = "Rasshirennye funktsii"
+    title.text = "Расширенные функции"
     tf = content.text_frame
-    tf.text = "Kalibrovka rasstoyaniya:"
+    tf.text = "Калибровка расстояния:"
+    tf.paragraphs[0].font.size = Pt(14)
+    tf.paragraphs[0].font.bold = True
     
     p = tf.add_paragraph()
-    p.text = "• Avtomaticheskoye opredelenie rasstoyaniya polzovatelya ot kamery"
+    p.text = "• Автоматическое определение расстояния пользователя от камеры"
     p.level = 1
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Obratnaya svyaz v realnom vremeni dlya optimalnogo pozitsionirovaniya (3-4 futa)"
+    p.text = "• Обратная связь в реальном времени для оптимального позиционирования (3-4 фута)"
     p.level = 1
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Vizualye podskazki: zelenyy = idealno, krasnyy = otregulirovat rasstoyanie"
+    p.text = "• Визуальные подсказки: зеленый = идеально, красный = отрегулировать расстояние"
     p.level = 1
+    p.font.size = Pt(12)
     
     p = tf.add_paragraph()
-    p.text = "Upravlenie dannymi:"
+    p.text = "Управление данными:"
+    p.font.size = Pt(14)
+    p.font.bold = True
     p = tf.add_paragraph()
-    p.text = "• Sokhranenie vsekh nastroyek i faylov modeli lokalno"
+    p.text = "• Сохранение всех настроек и файлов модели локально"
     p.level = 1
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Funktsiya ochistki pamyati s podtverzhdeniem"
+    p.text = "• Функция очистки памяти с подтверждением"
     p.level = 1
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Avtosokhranenie dlya vybora poz i polzovatelskikh imen"
+    p.text = "• Автосохранение для выбора поз и пользовательских имен"
     p.level = 1
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Postoyannye nastroyki mezhdu seansami brauzera"
+    p.text = "• Постоянные настройки между сеансами браузера"
     p.level = 1
+    p.font.size = Pt(12)
     
     # Slide 9: Use cases
     slide = prs.slides.add_slide(bullet_slide_layout)
@@ -250,65 +284,83 @@ def create_pose_recognition_presentation_russian():
     title = slide.shapes.title
     content = slide.placeholders[1]
     
-    title.text = "Klyuchevye preimushchestva"
+    title.text = "Ключевые преимущества"
     tf = content.text_frame
-    tf.text = "Konfidentsialnost i bezopasnost:"
+    tf.text = "Конфиденциальность и безопасность:"
+    tf.paragraphs[0].font.size = Pt(14)
+    tf.paragraphs[0].font.bold = True
     
     p = tf.add_paragraph()
-    p.text = "• Nikakie dannye ne otpravlyayutsya na vneshnie servery"
+    p.text = "• Никакие данные не отправляются на внешние серверы"
     p.level = 1
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Lokalnaya obrabotka obespechivaet konfidentsialnost"
+    p.text = "• Локальная обработка обеспечивает конфиденциальность"
     p.level = 1
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Avtonomnaya funktsionalnost zashchishchaet polzovatelskie dannye"
+    p.text = "• Автономная функциональность защищает пользовательские данные"
     p.level = 1
+    p.font.size = Pt(12)
     
     p = tf.add_paragraph()
-    p.text = "Polzovatelskiy opyt:"
+    p.text = "Пользовательский опыт:"
+    p.font.size = Pt(14)
+    p.font.bold = True
     p = tf.add_paragraph()
-    p.text = "• Mgnovennaya obratnaya svyaz so zvukovymi i vizualnymi podskazkami"
+    p.text = "• Мгновенная обратная связь со звуковыми и визуальными подсказками"
     p.level = 1
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Nastraivaemaya slozhnost i vremya"
+    p.text = "• Настраиваемая сложность и время"
     p.level = 1
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Chetkoe otslezhivanie progressa cherez posledovatelnosti poz"
+    p.text = "• Четкое отслеживание прогресса через последовательности поз"
     p.level = 1
+    p.font.size = Pt(12)
     
     # Slide 11: Get started today!
     slide = prs.slides.add_slide(bullet_slide_layout)
     title = slide.shapes.title
     content = slide.placeholders[1]
     
-    title.text = "Nachnite segodnya!"
+    title.text = "Начните сегодня!"
     tf = content.text_frame
-    tf.text = "Preobrazite svoy trenirovochnyy opyt s veb-prilozheniem raspoznavaniya poz"
-    tf.paragraphs[0].font.size = Pt(18)
+    tf.text = "Преобразите свой тренировочный опыт с веб-приложением распознавания поз"
+    tf.paragraphs[0].font.size = Pt(16)
     tf.paragraphs[0].font.bold = True
     tf.paragraphs[0].alignment = PP_ALIGN.CENTER
     
     p = tf.add_paragraph()
-    p.text = "\nDostupno na Replit: prostoye razvertyvanie i sovmestnoye ispolzovanie"
+    p.text = "\nДоступно на Replit: простое развертывание и совместное использование"
     p.font.bold = True
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "Otkrytyy iskhodnyy kod: nastraivaemyy dlya vashikh nuzhd"
+    p.text = "Открытый исходный код: настраиваемый для ваших нужд"
     p.font.bold = True
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "Bez ustanovki: zapuskaetsya pryamo v vashem brauzere"
+    p.text = "Без установки: запускается прямо в вашем браузере"
     p.font.bold = True
+    p.font.size = Pt(12)
     
     p = tf.add_paragraph()
-    p.text = "\nGotovo k ispolzovaniyu:"
+    p.text = "\nГотово к использованию:"
+    p.font.size = Pt(14)
+    p.font.bold = True
     p = tf.add_paragraph()
-    p.text = "• Mgnovennoe razvertyvanie na Replit"
+    p.text = "• Мгновенное развертывание на Replit"
     p.level = 1
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Podelites s vashey komandoy ili studentami"
+    p.text = "• Поделитесь с вашей командой или студентами"
     p.level = 1
+    p.font.size = Pt(12)
     p = tf.add_paragraph()
-    p.text = "• Nastroyte dlya konkretnykh sluchaev ispolzovaniya"
+    p.text = "• Настройте для конкретных случаев использования"
     p.level = 1
+    p.font.size = Pt(12)
     
     # Save presentation
     output_path = "attached_assets/Pose_Recognition_Presentation_Russian.pptx"
